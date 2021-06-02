@@ -15,7 +15,14 @@ public class Customisation : MonoBehaviour
     public List<Texture2D> clothesTextures = new List<Texture2D>();
     public List<Texture2D> armourTextures = new List<Texture2D>();
 
-    private int currentTextureIndex = 0;
+    public int skinsave;
+    public int hairsave;
+    public int mouthsave;
+    public int eyesave;
+    public int clothsave;
+    public int armoursave;
+
+    private int[] currentTextureIndex;
     //skinTextures[0] = Skin_0
     //skinTextures[1] = Skin_1
     //skinTextures[2] = Skin_2
@@ -25,10 +32,15 @@ public class Customisation : MonoBehaviour
 
     private void Start()
     {
+        var parts = Enum.GetValues(typeof(BodyParts));
+        currentTextureIndex = new int[parts.Length];
+
         GrabTextures();
 
-        foreach(BodyParts part in Enum.GetValues(typeof(BodyParts)))
+        for(int x = 0; x < parts.Length; x++)
         {
+            BodyParts part = (BodyParts)parts.GetValue(x);
+            currentTextureIndex[x] = PlayerPrefs.GetInt(part + "texture", 0);
             SetTexture(part, 0);
         }
     }
@@ -75,6 +87,25 @@ public class Customisation : MonoBehaviour
 
     void SetTexture(BodyParts bodyPart, int direction)
     {
+
+        //skinsave = PlayerPrefs.GetInt("saveskin");
+        //BodyParts skin = (BodyParts)skinsave;
+
+        //PlayerPrefs.GetInt("savehair", hairsave);
+        //(int)BodyParts.Hair =  hairsave ;
+
+        //PlayerPrefs.GetInt("savemoth", mouthsave);
+        //(int)BodyParts.Mouth =  mouthsave ;
+
+        //PlayerPrefs.GetInt("saveeye", eyesave);
+        //(int)BodyParts.Eyes = eyesave;
+
+        //PlayerPrefs.GetInt("savecloths", clothsave);
+        //(int)BodyParts.Clothes = clothsave;
+
+        //PlayerPrefs.GetInt("savearmour", armoursave);
+        //(int)BodyParts.Armour = armoursave;
+
         List<Texture2D> textures;
         switch (bodyPart)
         {
@@ -100,6 +131,24 @@ public class Customisation : MonoBehaviour
                 return;
         }
 
+        //skinsave = (int)bodyPart;
+        //PlayerPrefs.SetInt("saveskin" ,skinsave);
+        
+        //hairsave = (int)BodyParts.Hair;
+        //PlayerPrefs.SetInt("savehair", hairsave);
+        
+        //mouthsave = (int)BodyParts.Mouth;
+        //PlayerPrefs.SetInt("savemoth", mouthsave);
+        
+        //eyesave = (int)BodyParts.Eyes;
+        //PlayerPrefs.SetInt("saveeye", eyesave);
+
+        //clothsave = (int)BodyParts.Clothes;
+        //PlayerPrefs.SetInt("savecloths", clothsave);
+
+        //armoursave = (int)BodyParts.Armour;
+        //PlayerPrefs.SetInt("savearmour", armoursave);
+
 
         int partsIndex = (int)bodyPart;
         partsIndex++;//add one to skip the default material
@@ -108,14 +157,14 @@ public class Customisation : MonoBehaviour
         //currentTexture
 
         //allows the choice
-        currentTextureIndex += direction;
-        if(currentTextureIndex < 0)
+        currentTextureIndex[(int)bodyPart] += direction;
+        if(currentTextureIndex[(int)bodyPart] < 0)
         {
-            currentTextureIndex = partsCount - 1;//go to the end
+            currentTextureIndex[(int)bodyPart] = partsCount - 1;//go to the end
         }
-        else if(currentTextureIndex > partsCount - 1)
+        else if(currentTextureIndex[(int)bodyPart] > partsCount - 1)
         {
-            currentTextureIndex = 0;//go to the start
+            currentTextureIndex[(int)bodyPart] = 0;//go to the start
         }
 
 
@@ -123,8 +172,12 @@ public class Customisation : MonoBehaviour
         //skinTextures[currentTextureIndex]
 
         Material[] mats = characterRenderer.materials;
-        mats[partsIndex].mainTexture = textures[currentTextureIndex];
+        int x = currentTextureIndex[(int)bodyPart];
+        mats[partsIndex].mainTexture = textures[x];
         characterRenderer.materials = mats;
+
+
+        PlayerPrefs.SetInt(bodyPart + "texture", currentTextureIndex[(int)bodyPart]);
     }
 
 

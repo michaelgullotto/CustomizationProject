@@ -24,17 +24,17 @@ public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private PlayerRace[] playerRaces;
     private PlayerRace _race;
-    public PlayerRace Race;
-     //{
-     // get {return _race;}
-     // set
-     //   { _race = value;
-      
-      
-     //   }
-     //}
-        
-
+    public PlayerRace Race
+    {
+        get
+        {
+            return _race;
+        }
+        set
+        {
+            _race = value;
+        }
+    }
 
     [SerializeField] private PlayerProfession[] playerProfessions;
 
@@ -42,15 +42,15 @@ public class PlayerStats : MonoBehaviour
     public PlayerProfession Profession
     {
         get { return _profession; }
-        set 
-        { 
+        set
+        {
             _profession = value;
-            strength.defaultStat        = _profession.strength;
-            dexterity.defaultStat       = _profession.dexterity;
-            constitution.defaultStat    = _profession.constitution;
-            wisdom.defaultStat          = _profession.wisdom;
-            intelligence.defaultStat    = _profession.intelligence;
-            charisma.defaultStat        = _profession.charisma;
+            strength.defaultStat = _profession.strength;
+            dexterity.defaultStat = _profession.dexterity;
+            constitution.defaultStat = _profession.constitution;
+            wisdom.defaultStat = _profession.wisdom;
+            intelligence.defaultStat = _profession.intelligence;
+            charisma.defaultStat = _profession.charisma;
             UpdateStats();
         }
     }
@@ -146,14 +146,14 @@ public class PlayerStats : MonoBehaviour
 
     private void SaveOnGUI()
     {
-        if(GUI.Button(new Rect(150,10,100,20),"Save"))
+        if (GUI.Button(new Rect(150, 10, 100, 20), "Save"))
         {
             PlayerBinary.SavePlayerData(transform, this);
         }
 
         if (GUI.Button(new Rect(150, 40, 100, 20), "Load"))
         {
-            PlayerData playerData =  PlayerBinary.LoadPlayerData(transform, this);
+            PlayerData playerData = PlayerBinary.LoadPlayerData(transform, this);
         }
 
 
@@ -204,14 +204,14 @@ public class PlayerStats : MonoBehaviour
         GUI.Box(new Rect(Screen.width - 170, currentY, 155, 80), "Profession");
 
         currentY += 20;
-        scrollPosition = GUI.BeginScrollView(new Rect(Screen.width -170, currentY,155,50)
+        scrollPosition = GUI.BeginScrollView(new Rect(Screen.width - 170, currentY, 155, 50)
                                             , scrollPosition
-                                            , new Rect(0,0,100,30 * playerProfessions.Length));
+                                            , new Rect(0, 0, 100, 30 * playerProfessions.Length));
 
         currentY = 0;
         foreach (PlayerProfession profession in playerProfessions)
         {
-            if(GUI.Button(new Rect(20, currentY,100,20),profession.ProfessionName))
+            if (GUI.Button(new Rect(20, currentY, 100, 20), profession.ProfessionName))
             {
                 Profession = profession;
             }
