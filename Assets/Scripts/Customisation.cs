@@ -15,6 +15,9 @@ public class Customisation : MonoBehaviour
     public List<Texture2D> clothesTextures = new List<Texture2D>();
     public List<Texture2D> armourTextures = new List<Texture2D>();
 
+    public GameObject leftbuton;
+    public GameObject rightbutton;
+
     public int skinsave;
     public int hairsave;
     public int mouthsave;
@@ -152,12 +155,15 @@ public class Customisation : MonoBehaviour
     private void OnGUI()
     {
         CustomiseOnGUI();
+        //custom();
+        
     }
 
     private void CustomiseOnGUI()
     {
         float currentY = 40;
-        //int i = 0;
+
+        
 
         GUI.Box(new Rect(10, 10, 110, 210), "Visuals");
 
@@ -175,4 +181,36 @@ public class Customisation : MonoBehaviour
             currentY += 30;
         }
     }
+
+    //private void custom()
+    //{
+        
+    //    float currentY = 40;
+    //    Vector3 leftspawnpos = new Vector3();
+    //    leftspawnpos.y = currentY;
+    //    leftspawnpos.x = 20;
+
+    //    foreach (BodyParts part in Enum.GetValues(typeof(BodyParts)))
+    //    {
+    //         Instantiate(leftbuton, leftspawnpos, Quaternion.identity);
+           
+
+
+
+    //        currentY += 30;
+    //    }
+
+
+    //}
+
+    //public void addSkin()
+    //{
+    //    SetTexture(part, 1);
+    //}
+
+
+
+
 }
+
+

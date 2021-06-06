@@ -489,7 +489,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183034245
 GameObject:
@@ -2333,8 +2333,9 @@ RectTransform:
   - {fileID: 1904321393}
   - {fileID: 1600346872}
   - {fileID: 1670487333}
+  - {fileID: 732295565788093086}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4339,7 +4340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891123479
 GameObject:
@@ -10312,6 +10313,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 835cd1ec1001e5e48afe367be0bda24d, type: 3}
   - {fileID: 2800000, guid: 71b2136ac76962d44b4b3a6aabf3accd, type: 3}
   - {fileID: 2800000, guid: e84e116df0c7c7a4a958ef978be68320, type: 3}
+  leftbuton: {fileID: 5241224130806478730, guid: 0c0bba64819065245a12339bbc7914cb, type: 3}
+  rightbutton: {fileID: 0}
   skinsave: 0
   hairsave: 0
   mouthsave: 0
@@ -10327,11 +10330,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732295565788093056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1833477, y: 4.1340404, z: 13.462843}
+  m_LocalPosition: {x: -957.81665, y: -535.86597, z: 13.462843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 618089641}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855728307627084834
 GameObject:
