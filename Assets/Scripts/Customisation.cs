@@ -88,23 +88,7 @@ public class Customisation : MonoBehaviour
     void SetTexture(BodyParts bodyPart, int direction)
     {
 
-        //skinsave = PlayerPrefs.GetInt("saveskin");
-        //BodyParts skin = (BodyParts)skinsave;
-
-        //PlayerPrefs.GetInt("savehair", hairsave);
-        //(int)BodyParts.Hair =  hairsave ;
-
-        //PlayerPrefs.GetInt("savemoth", mouthsave);
-        //(int)BodyParts.Mouth =  mouthsave ;
-
-        //PlayerPrefs.GetInt("saveeye", eyesave);
-        //(int)BodyParts.Eyes = eyesave;
-
-        //PlayerPrefs.GetInt("savecloths", clothsave);
-        //(int)BodyParts.Clothes = clothsave;
-
-        //PlayerPrefs.GetInt("savearmour", armoursave);
-        //(int)BodyParts.Armour = armoursave;
+        
 
         List<Texture2D> textures;
         switch (bodyPart)
@@ -131,23 +115,7 @@ public class Customisation : MonoBehaviour
                 return;
         }
 
-        //skinsave = (int)bodyPart;
-        //PlayerPrefs.SetInt("saveskin" ,skinsave);
         
-        //hairsave = (int)BodyParts.Hair;
-        //PlayerPrefs.SetInt("savehair", hairsave);
-        
-        //mouthsave = (int)BodyParts.Mouth;
-        //PlayerPrefs.SetInt("savemoth", mouthsave);
-        
-        //eyesave = (int)BodyParts.Eyes;
-        //PlayerPrefs.SetInt("saveeye", eyesave);
-
-        //clothsave = (int)BodyParts.Clothes;
-        //PlayerPrefs.SetInt("savecloths", clothsave);
-
-        //armoursave = (int)BodyParts.Armour;
-        //PlayerPrefs.SetInt("savearmour", armoursave);
 
 
         int partsIndex = (int)bodyPart;

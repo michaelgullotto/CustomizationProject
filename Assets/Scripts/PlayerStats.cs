@@ -59,7 +59,7 @@ public class PlayerStats : MonoBehaviour
     public enum BaseStats { Strength, Dexterity, Constitution, Wisdom, Intelligence, Charisma };
 
     public int level;
-    public int pointPool = 5;
+    public int pointPool =  5;
 
     [Header("Base Stats")]
     public Stats strength;        //Health + Health regen
@@ -255,4 +255,5 @@ public class PlayerStats : MonoBehaviour
             currentY += 30;
         }
     }
+
 }
