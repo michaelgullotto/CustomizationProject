@@ -7,6 +7,6 @@ public class CharismaTxt : MonoBehaviour
    
     void Update()
     {
-        GetComponent<TMPro.TextMeshProUGUI>().text = "Charisma:" + Mystats.wisdom.ToString();
+        GetComponent<TMPro.TextMeshProUGUI>().text = "Charisma:" + Mystats.charisma.ToString();
     }
 }

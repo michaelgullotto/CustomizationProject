@@ -1,0 +1,259 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Enterprise; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16318 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\games\unity\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/github/CustomizationProject
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52687
+Successfully changed project path to: D:/github/CustomizationProject
+D:/github/CustomizationProject
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 18.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path D:/games/unity/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/github/CustomizationProject/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f02)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'D:/games/unity/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'D:/games/unity/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/games/unity/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56548
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/games/unity/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000756 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 19.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.624 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000335 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.592 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1170 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.2 MB.
+System memory in use after: 60.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1614.
+Total: 1.520500 ms (FindLiveObjects: 0.180000 ms CreateObjectMapping: 0.081600 ms MarkObjects: 1.189900 ms  DeleteObjects: 0.068000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Audio
+  artifactKey: Guid(91fcff27f5022d246a614f575218d30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio using Guid(91fcff27f5022d246a614f575218d30c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a42a8150a029328c267bf6dd744cc9') in 0.005874 seconds
+  Import took 0.007427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.278718 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f05639a7fd4692f9e181487228bad322') in 0.022029 seconds
+  Import took 0.040264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.130625 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '572d00ec89132de2ee5007c0cc738bdc') in 0.001629 seconds
+  Import took 0.003110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.068112 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '572d00ec89132de2ee5007c0cc738bdc') in 0.001757 seconds
+  Import took 0.003362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.452045 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f25760fd6136161aae378c686620884') in 0.001764 seconds
+  Import took 0.003780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.858537 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654af32c92b3e342957b1d2087c2220a') in 0.001625 seconds
+  Import took 0.003144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012120 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654af32c92b3e342957b1d2087c2220a') in 0.001849 seconds
+  Import took 0.003671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.357395 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2ae820a3b7dfd57ba6cd740a1d03b9') in 0.001755 seconds
+  Import took 0.003414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.045346 seconds.
+  path: Assets/Scripts/Audio/Warframe Call of the Tempestarii OST - Login Screen.mp3
+  artifactKey: Guid(696efc447b8ac23438bed3ba7c70eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Warframe Call of the Tempestarii OST - Login Screen.mp3 using Guid(696efc447b8ac23438bed3ba7c70eeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1bb8a5eda6c001943a1db07137c4ed9') in 0.060204 seconds
+  Import took 0.061799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.535443 seconds.
+  path: Assets/Scripts/Audio/chewbacca.swf.mp3
+  artifactKey: Guid(8d24e81a2b634ca4c84548beca6a0666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/chewbacca.swf.mp3 using Guid(8d24e81a2b634ca4c84548beca6a0666) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd195f51be1a17de0e0075f885df4bd') in 0.009583 seconds
+  Import took 0.011359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.731425 seconds.
+  path: Assets/Scripts/Audio/youre-a-wizard.mp3
+  artifactKey: Guid(5e46116cb175b564089648b50d2b4c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/youre-a-wizard.mp3 using Guid(5e46116cb175b564089648b50d2b4c93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31fd052409fdfe8185c5509145362935') in 0.008205 seconds
+  Import took 0.009888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.097241 seconds.
+  path: Assets/Scripts/Audio/my-video5.mp3
+  artifactKey: Guid(4f6e5ecf25974c14ea4a5721969b2888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/my-video5.mp3 using Guid(4f6e5ecf25974c14ea4a5721969b2888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57695f7d13c43a69011d782c29834fd9') in 0.008532 seconds
+  Import took 0.010239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.164219 seconds.
+  path: Assets/Scripts/Audio/l08arthas34.mp3
+  artifactKey: Guid(8a87011d2c77ef641bdbc8aaac1185ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/l08arthas34.mp3 using Guid(8a87011d2c77ef641bdbc8aaac1185ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '112c70382b866eb891adf95e6e6351e9') in 0.008593 seconds
+  Import took 0.010299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.633111 seconds.
+  path: Assets/Scripts/Audio/warrior.mp3
+  artifactKey: Guid(8a87011d2c77ef641bdbc8aaac1185ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/warrior.mp3 using Guid(8a87011d2c77ef641bdbc8aaac1185ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b268bbccc6398ce958cb1259ae9c9a') in 0.008460 seconds
+  Import took 0.010114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.136989 seconds.
+  path: Assets/Scripts/Audio/boring_4.mp3
+  artifactKey: Guid(8faeee2f30169d04396f80a3f081fed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/boring_4.mp3 using Guid(8faeee2f30169d04396f80a3f081fed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '222dba46c5de185d434007c03f01efad') in 0.008569 seconds
+  Import took 0.010317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 447.961271 seconds.
+  path: Assets/Scripts/the-tick-nope.mp3
+  artifactKey: Guid(425f2da0614601147856e351b3473485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/the-tick-nope.mp3 using Guid(425f2da0614601147856e351b3473485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '804f7cf17e2d50a6e8448ca9dd2cde4e') in 0.010886 seconds
+  Import took 0.012660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.892453 seconds.
+  path: Assets/Scripts/tick-deepfrozenapps-397275646-2.mp3
+  artifactKey: Guid(b0f98529792e5324dbbd7d5596c4e629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/tick-deepfrozenapps-397275646-2.mp3 using Guid(b0f98529792e5324dbbd7d5596c4e629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b61d03f3e9c7696bf5cecfd77819852f') in 0.009384 seconds
+  Import took 0.011473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.113585 seconds.
+  path: Assets/Scripts/Audio/nope.mp3
+  artifactKey: Guid(425f2da0614601147856e351b3473485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/nope.mp3 using Guid(425f2da0614601147856e351b3473485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb6c900d88cfb438497012e0244eb4d') in 0.009815 seconds
+  Import took 0.011402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.817636 seconds.
+  path: Assets/Scripts/Audio/Master.mixer
+  artifactKey: Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Master.mixer using Guid(85d2c6f4821322e49bf369e9e293e9ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b516731f46e8b1206029b5d234de69') in 0.001902 seconds
+  Import took 0.019938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.242971 seconds.
+  path: Assets/Scripts/Audio/Tcik.mp3
+  artifactKey: Guid(b0f98529792e5324dbbd7d5596c4e629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Tcik.mp3 using Guid(b0f98529792e5324dbbd7d5596c4e629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6285bc616e0ffbea7002c1333d73ff9e') in 0.010509 seconds
+  Import took 0.012294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.175263 seconds.
+  path: Assets/Scripts/Audio/tick-deepfrozenapps-397275646-2.prefab
+  artifactKey: Guid(de25a1f4d45039246a2d294b6f3012c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/tick-deepfrozenapps-397275646-2.prefab using Guid(de25a1f4d45039246a2d294b6f3012c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed8d9b8935091a80293800f130a0aaf') in 0.009679 seconds
+  Import took 0.011349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.166320 seconds.
+  path: Assets/Scripts/Audio/tick-deepfrozenapps-397275646-2.mp3
+  artifactKey: Guid(f0da02b83fedf6b4eafb8c8d90411165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/tick-deepfrozenapps-397275646-2.mp3 using Guid(f0da02b83fedf6b4eafb8c8d90411165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '893401a54e804d80a42dd3e8ffd2b757') in 0.004135 seconds
+  Import took 0.005813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.424606 seconds.
+  path: Assets/Scripts/Audio/Tick.mp3
+  artifactKey: Guid(f0da02b83fedf6b4eafb8c8d90411165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Audio/Tick.mp3 using Guid(f0da02b83fedf6b4eafb8c8d90411165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aca613cbdf0d087874f6e1a29b37006') in 0.009057 seconds
+  Import took 0.010744 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

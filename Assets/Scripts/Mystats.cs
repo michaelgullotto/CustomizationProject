@@ -1,27 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Mystats : MonoBehaviour
 {
-    static public int strength ;
-    static public int Dextrerity ;
-    static public int constitution ;
-    static public int wisdom ;
-    static public int intelligence ;
-    static public int charisma ;
-    int poolstrength = 0;
-    int poolDextrerity = 0;
-    int poolconstitution = 0;
-    int poolwisdom = 0;
-    int poolintelligence = 0;
-    int poolcharisma = 0;
-    int basestrength = 0;
-    int baseDextrerity = 0;
-    int baseconstitution = 0;
-    int basewisdom =0;
-    int baseintelligence =0;
-    int basecharisma =0;
+    public AudioSource music;
+    public AudioSource ork;
+    public AudioSource human;
+    public AudioSource mage;
+    public AudioSource warrior;
+    public AudioSource statstick;
+    public AudioSource nostats;
+
+    static public int strength;
+    static public int Dextrerity;
+    static public int constitution;
+    static public int wisdom;
+    static public int intelligence;
+    static public int charisma;
+    static public int poolstrength = 0;
+    static public int poolDextrerity = 0;
+    static public int poolconstitution = 0;
+    static public int poolwisdom = 0;
+    static public int poolintelligence = 0;
+    static public int poolcharisma = 0;
+    static public int basestrength = 0;
+    static public int baseDextrerity = 0;
+    static public int baseconstitution = 0;
+    static public int basewisdom =0;
+    static public int baseintelligence =0;
+    static public int basecharisma =0;
 
     static public int level = 1;
     static public int statpool = 10;
@@ -29,6 +38,10 @@ public class Mystats : MonoBehaviour
     static public int maxhealth;
     static public int healthregen;
     static public int currenthealth;
+
+    static public int Movespeed;
+    static public int stamina;
+    static public int staminaregen;
 
     static public int maxMana;
     static public int manaRegen;
@@ -41,7 +54,10 @@ public class Mystats : MonoBehaviour
     static public string classAblity;
     static public string classAblityDes;
 
-
+    private void Start()
+    {
+        music.Play();
+    }
     private void Update()
     {
        
@@ -49,6 +65,10 @@ public class Mystats : MonoBehaviour
         healthregen = strength ;
         maxMana = intelligence * 20;
         manaRegen = intelligence;
+
+        Movespeed = 20 + Dextrerity;
+        stamina = Dextrerity * 3;
+        staminaregen = Dextrerity / 2;
 
         if(currentMana > maxMana)
         {
@@ -74,12 +94,14 @@ public class Mystats : MonoBehaviour
         race = "Ork";
         raceAblity = "Ork Smash";
         raceAblityDes = "Smashes hands into ground doing sending out shockwaves dealing 2x strength + 100 dmg";
+        ork.Play();
     }
     public void SetHuman()
     {
         race = "Human";
         raceAblity = "whimper";
         raceAblityDes = "shrieks in fear causeing ememys to be stuned by laughter for 3 seconds";
+        human.Play();
     }
     public void SetWarrior()
     {
@@ -93,6 +115,7 @@ public class Mystats : MonoBehaviour
         basewisdom = 2 + (1 * level);
         baseintelligence = 1 + (1 * level);
         basecharisma = 5 + (2 * level);
+        warrior.Play();
     }
     public void SetMage()
     {
@@ -106,6 +129,7 @@ public class Mystats : MonoBehaviour
         basewisdom = 11 + (4 * level);
         baseintelligence = 11 + (6 * level);
         basecharisma = 1 + (1 * level);
+        mage.Play();
     }
 
 
@@ -115,6 +139,11 @@ public class Mystats : MonoBehaviour
         {
             statpool--;
             poolstrength++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
@@ -124,6 +153,11 @@ public class Mystats : MonoBehaviour
         {
             statpool ++;
             poolstrength --;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
     public void AddDex()
@@ -132,6 +166,11 @@ public class Mystats : MonoBehaviour
         {
             statpool--;
             poolDextrerity++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
@@ -141,6 +180,11 @@ public class Mystats : MonoBehaviour
         {
             statpool++;
             poolDextrerity--;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
     public void AddConstitution()
@@ -149,6 +193,11 @@ public class Mystats : MonoBehaviour
         {
             statpool--;
             poolconstitution++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
@@ -158,6 +207,11 @@ public class Mystats : MonoBehaviour
         {
             statpool++;
             poolconstitution--;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
     public void AddWisdom()
@@ -166,6 +220,11 @@ public class Mystats : MonoBehaviour
         {
             statpool--;
             poolwisdom++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
@@ -175,6 +234,11 @@ public class Mystats : MonoBehaviour
         {
             statpool++;
             poolwisdom--;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
     public void AddIntel()
@@ -183,6 +247,11 @@ public class Mystats : MonoBehaviour
         {
             statpool--;
            poolintelligence++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
@@ -192,24 +261,76 @@ public class Mystats : MonoBehaviour
         {
             statpool++;
             poolintelligence--;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
     public void AddCharisma()
     {
         if (statpool > 0)
         {
-            statpool--;
-            poolcharisma++;
+            statpool --;
+            poolcharisma ++;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
 
     }
     public void MinusCharisa()
     {
-        if (poolcharisma > 0)
+        if (statpool > 0)
         {
-            statpool++;
-            poolcharisma--;
+            statpool ++;
+            poolcharisma --;
+            statstick.Play();
+        }
+        else
+        {
+            nostats.Play();
         }
     }
+
+    public void SaveOnClick()
+    {
+        //MyStatsBinary.SavePlayerData(this);
+    }
+
+    public void loadOnclick()
+    {
+        //MystatsData mystatsData = MyStatsBinary.loadMyStatsData(this);
+
+        if (race != null)
+        {
+            if (race == "Ork")
+            {
+                SetOrk();
+            }
+            else if (race == "Human")
+            {
+                SetHuman();
+            }
+        }
+         if(playerclass != null)
+        {
+            if (playerclass == "Mage")
+            {
+                SetMage();
+            }
+            else if (playerclass == "Warrior")
+            {
+                SetWarrior();
+            }
+
+        }
+
+    }
+
+
 
 }
