@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 public class Mystats : MonoBehaviour
 {
     public AudioSource music;
@@ -295,15 +296,74 @@ public class Mystats : MonoBehaviour
             nostats.Play();
         }
     }
-
-    public void SaveOnClick()
+    public void SaveGame()
     {
-        //MyStatsBinary.SavePlayerData(this);
+        Save save = CreateSaveGameObjects();
+
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
+        bf.Serialize(file, save);
+        file.Close();
+
+
     }
 
-    public void loadOnclick()
+
+    private Save CreateSaveGameObjects()
     {
-        //MystatsData mystatsData = MyStatsBinary.loadMyStatsData(this);
+        Save save = new Save();
+        
+        Save.strength =  strength;
+        Save.Dextrerity = Dextrerity;
+        Save.constitution = constitution;
+        Save.wisdom = wisdom;
+        Save.intelligence = intelligence;
+        Save.charisma = charisma;
+        Save.poolstrength = poolstrength;
+        Save.poolDextrerity = poolDextrerity;
+        Save.poolconstitution =poolconstitution;
+        Save.poolwisdom = poolwisdom;
+        Save.poolintelligence = poolintelligence;
+        Save.poolcharisma = poolcharisma;
+
+        Save.race = race;
+        Save.playerclass = playerclass;
+
+        Save.level = level;
+        Save.statpool = statpool;
+
+        return save;
+    }
+
+    public void loadGame()
+    {
+        if(File.Exists(Application.persistentDataPath + "/gamesave.save"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
+            Save save = (Save)bf.Deserialize(file);
+            file.Close();
+
+            strength = Save.strength;
+            Dextrerity = Save.Dextrerity;
+            constitution = Save.constitution;
+            wisdom = Save.wisdom;
+            intelligence = Save.intelligence;
+            charisma = Save.charisma;
+            poolstrength = Save.poolstrength;
+            poolDextrerity = Save.poolDextrerity;
+            poolconstitution = Save.poolconstitution;
+            poolwisdom = Save.poolwisdom;
+            poolintelligence = Save.poolintelligence;
+            poolcharisma = Save.poolcharisma;
+
+            race = Save.race;
+            playerclass = Save.playerclass;
+
+            level = Save.level;
+            statpool = Save.statpool;
+        }
+
 
         if (race != null)
         {

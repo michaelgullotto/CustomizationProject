@@ -3847,7 +3847,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888958543}
         m_TargetAssemblyTypeName: Mystats, Assembly-CSharp
-        m_MethodName: SaveOnClick
+        m_MethodName: SaveGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4260,7 +4260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 888958543}
         m_TargetAssemblyTypeName: Mystats, Assembly-CSharp
-        m_MethodName: loadOnclick
+        m_MethodName: loadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
