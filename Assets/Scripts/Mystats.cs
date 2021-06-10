@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+
 public class Mystats : MonoBehaviour
 {
+    // a very long list of varibles......
     public AudioSource music;
     public AudioSource ork;
     public AudioSource human;
@@ -13,6 +15,7 @@ public class Mystats : MonoBehaviour
     public AudioSource warrior;
     public AudioSource statstick;
     public AudioSource nostats;
+    [SerializeField] Customisation customisation;
 
     static public int strength;
     static public int Dextrerity;
@@ -36,13 +39,14 @@ public class Mystats : MonoBehaviour
     static public int level = 1;
     static public int statpool = 10;
 
-    static public int maxhealth;
+    static public int maxhealth = 10;
     static public int healthregen;
     static public int currenthealth;
 
     static public int Movespeed;
     static public int stamina;
     static public int staminaregen;
+    static public int currentstamina = 10;
 
     static public int maxMana;
     static public int manaRegen;
@@ -57,11 +61,15 @@ public class Mystats : MonoBehaviour
 
     private void Start()
     {
+        // plays music
         music.Play();
+       
+       
+        
     }
     private void Update()
     {
-       
+       // varible calculations
         maxhealth = strength * 20;
         healthregen = strength ;
         maxMana = intelligence * 20;
@@ -71,6 +79,7 @@ public class Mystats : MonoBehaviour
         stamina = Dextrerity * 3;
         staminaregen = Dextrerity / 2;
 
+        // in game future proofing 
         if(currentMana > maxMana)
         {
             currentMana = maxMana;
@@ -81,7 +90,13 @@ public class Mystats : MonoBehaviour
             currenthealth = maxhealth;
         }
 
+        if (currentstamina > stamina)
+        {
+            currentstamina = stamina;
+        }
 
+
+        // combineds stats from player choice with stats of class while needed to stop players over removing stats
         strength = poolstrength + basestrength + 5;
         Dextrerity = poolDextrerity + baseDextrerity + 5;
         constitution = poolconstitution + baseconstitution + 5;
@@ -90,6 +105,7 @@ public class Mystats : MonoBehaviour
         charisma = poolcharisma + basecharisma + 5;
     }
 
+    //sets race
     public void SetOrk()
     {
         race = "Ork";
@@ -104,6 +120,7 @@ public class Mystats : MonoBehaviour
         raceAblityDes = "shrieks in fear causeing ememys to be stuned by laughter for 3 seconds";
         human.Play();
     }
+    // clases 
     public void SetWarrior()
     {
         playerclass = "Warrior";
@@ -133,7 +150,7 @@ public class Mystats : MonoBehaviour
         mage.Play();
     }
 
-
+    // stats add and remove from GUI
     public void AddStrength()
     {
         if (statpool > 0)
@@ -296,8 +313,11 @@ public class Mystats : MonoBehaviour
             nostats.Play();
         }
     }
+    // saves the game
     public void SaveGame()
     {
+        
+        
         Save save = CreateSaveGameObjects();
 
         BinaryFormatter bf = new BinaryFormatter();
@@ -305,66 +325,99 @@ public class Mystats : MonoBehaviour
         bf.Serialize(file, save);
         file.Close();
 
-
     }
 
-
+    // creates the save file
     private Save CreateSaveGameObjects()
     {
         Save save = new Save();
         
-        Save.strength =  strength;
-        Save.Dextrerity = Dextrerity;
-        Save.constitution = constitution;
-        Save.wisdom = wisdom;
-        Save.intelligence = intelligence;
-        Save.charisma = charisma;
-        Save.poolstrength = poolstrength;
-        Save.poolDextrerity = poolDextrerity;
-        Save.poolconstitution =poolconstitution;
-        Save.poolwisdom = poolwisdom;
-        Save.poolintelligence = poolintelligence;
-        Save.poolcharisma = poolcharisma;
-
-        Save.race = race;
-        Save.playerclass = playerclass;
-
-        Save.level = level;
-        Save.statpool = statpool;
+        save.strength =  strength;
+        save.Dextrerity = Dextrerity;
+        save.constitution = constitution;
+        save.wisdom = wisdom;
+        save.intelligence = intelligence;
+        save.charisma = charisma;
+        save.poolstrength = poolstrength;
+        save.poolDextrerity = poolDextrerity;
+        save.poolconstitution =poolconstitution;
+        save.poolwisdom = poolwisdom;
+        save.poolintelligence = poolintelligence;
+        save.poolcharisma = poolcharisma;
+        
+        save.race = race;
+        save.playerclass = playerclass;
+        
+        save.level = level;
+        save.statpool = statpool;
+        save.saveskin = customisation.indexskin;
+        save.savehair = customisation.indexhair;
+        save.saveeyes = customisation.indexeyes;
+        save.savemouth = customisation.indexmouth;
+        save.saveclothes = customisation.indexclothes;
+        save.savearmour = customisation.indexarmour;
 
         return save;
     }
-
+    //laods the game
     public void loadGame()
     {
-        if(File.Exists(Application.persistentDataPath + "/gamesave.save"))
+       
+
+        if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
             Save save = (Save)bf.Deserialize(file);
             file.Close();
 
-            strength = Save.strength;
-            Dextrerity = Save.Dextrerity;
-            constitution = Save.constitution;
-            wisdom = Save.wisdom;
-            intelligence = Save.intelligence;
-            charisma = Save.charisma;
-            poolstrength = Save.poolstrength;
-            poolDextrerity = Save.poolDextrerity;
-            poolconstitution = Save.poolconstitution;
-            poolwisdom = Save.poolwisdom;
-            poolintelligence = Save.poolintelligence;
-            poolcharisma = Save.poolcharisma;
+            //list of stats loaded
+            strength =      save.strength;   
+            Dextrerity =    save.Dextrerity;
+            constitution =  save.constitution;
+            wisdom =        save.wisdom;
+            intelligence =  save.intelligence;
+            charisma =      save.charisma;
+            poolstrength =  save.poolstrength;
+            poolDextrerity = save.poolDextrerity;
+            poolconstitution= save.poolconstitution;
+            poolwisdom =        save.poolwisdom;
+            poolintelligence =  save.poolintelligence;
+            poolcharisma = save.poolcharisma;
 
-            race = Save.race;
-            playerclass = Save.playerclass;
+            race = save.race;
+            playerclass = save.playerclass;
 
-            level = Save.level;
-            statpool = Save.statpool;
+            level = save.level;
+            statpool = save.statpool;
+
+            //re choses textures on load
+            customisation.indexskin = save.saveskin;
+            Material[] mats = customisation.characterRenderer.materials;
+            mats[(int)Customisation.BodyParts.Skin].mainTexture = customisation.skinTextures[customisation.indexskin];
+
+
+
+            customisation.indexhair = save.savehair;
+            mats[(int)Customisation.BodyParts.Hair].mainTexture = customisation.hairTextures[customisation.indexhair];
+
+            customisation.indexeyes = save.saveeyes;
+            mats[(int)Customisation.BodyParts.Eyes].mainTexture = customisation.eyesTextures[customisation.indexeyes];
+
+            customisation.indexmouth = save.savemouth;
+            mats[(int)Customisation.BodyParts.Mouth].mainTexture = customisation.mouthTextures[customisation.indexmouth];
+
+            customisation.indexclothes = save.saveclothes;
+            mats[(int)Customisation.BodyParts.Clothes].mainTexture = customisation.clothesTextures[customisation.indexclothes];
+
+            customisation.indexarmour = save.savearmour;
+            mats[(int)Customisation.BodyParts.Armour].mainTexture = customisation.armourTextures[customisation.indexarmour];
+
+
         }
 
-
+      
+        //Loads rest of race data that isnt saved
         if (race != null)
         {
             if (race == "Ork")
@@ -388,6 +441,7 @@ public class Mystats : MonoBehaviour
             }
 
         }
+       
 
     }
 

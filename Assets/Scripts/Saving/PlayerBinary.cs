@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+//ANDREWS CODE USED FOR PROTOTYPING
 public static class PlayerBinary
 {
     public static void SavePlayerData(Transform playerTransform, PlayerStats playerStats)

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
- [System.Serializable]
+//My attempt to copy ANDREWS CODE USED FOR PROTOTYPING
+[System.Serializable]
 public class PlayerRace
 {
     public string RaceName = "Race";
